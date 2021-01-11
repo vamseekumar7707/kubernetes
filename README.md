@@ -3,6 +3,8 @@
 nginx directory --> FrontEnd Pod  
 backend directory --> BackEnd Pod  
 database directory --> MySQL:5.6 database Pod  
+
+
 REFERENCE:
 ----------
 1) https://artifacthub.io/packages/helm/nginx/nginx-ingress
