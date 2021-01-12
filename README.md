@@ -37,3 +37,8 @@ helm pull nginx-stable/nginx-ingress --untar=true
 
 # Route 53 changes 
 In Route 53 service kops.cf is Hosted Zones , so create a Record called ex.kops.cf and asign Ingress contoller load balancer in Record.
+
+
+# Change the file
+go to /etc/  ----> in hosts file add ur Ingress LoadBalancer and hosts  
+ex: LB hosts
