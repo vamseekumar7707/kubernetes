@@ -1,0 +1,20 @@
+# Download From Git    
+wget  https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml  
+# Change yml  
+        args:  
+        - --kubelet-insecure-tls  
+        - --kubelet-preferred-address-types=InternalIP  
+
+# Change kops cluster Config  
+kops edit cluster --name {cluster_name}  
+# edit following part  
+  kubelet:  
+    anonymousAuth: false  
+    authenticationTokenWebhook: true  
+    authorizationMode: Webhook  
+# you have run following commands  
+kops update cluster --yes  
+kops rolling-update cluster--yes  
+
+
+
